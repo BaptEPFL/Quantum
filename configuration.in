@@ -1,0 +1,25 @@
+% Simulation choice
+simulation = variational % shooting, matching, variational, ...
+
+% Potential choice
+potential_number = 1 % 1 for square wells
+
+%% Shooting Method
+E0 = -1 % Initial energy trial
+V0 = 100000.0 % Infinite potential outside
+tolerance = 1e-6
+dE = 0.01
+nsteps_max = 10000000
+ninters = 50
+divergence_criterion = 4.0
+output = output.out
+output_energy = output_energy.out
+
+%% Matching Method
+intersection_criterion = 0.0001
+x_match = -0.6
+
+%% Monte-Carlo
+dphi = 0.01
+continue = false
+nattempts = 15
